@@ -1,5 +1,5 @@
 import React from "react";
-import background from "../../../assets/background.png";
+import background from "../../../assets/background.mp4";
 
 function Image({ title }) {
   /* Pour utiliser ce composant, suivre les étapes suivantes :
@@ -16,14 +16,17 @@ function Image({ title }) {
   */
 
   const landingData = {
-    h2: "Belle phrase d'accroche",
-    alt: "decription de l'image",
+    h2: "Ta pizzeria Hallal préférée à Saint-Denis",
+    alt: "pizzas",
   };
   return (
     <section className="landing_page relative">
       <h1>{title}</h1>
       <h2>{landingData.h2}</h2>
-      <img src={background} alt={landingData.alt} className="background_img" />
+      <video autoPlay muted loop className="background_img">
+        <source src={background} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <div className="veil" />
     </section>
   );

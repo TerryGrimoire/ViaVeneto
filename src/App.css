@@ -1,14 +1,16 @@
 /********************************************************************* CSS VARIABLES *********************************************************************/ 
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
 :root {
 
   --main-bg-color : #FFFFFF;
   --secondary-bg-color : #191919;
-  --third-color : #999999;
+  --third-color : #FFEC2E;
+  --fourth-color : #EE340A;
   --button-color: #0055FF;
-  --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 4px 16px, #e1e1e1 0px 8px 16px;
-  --font-title : 'Mukta', sans-serif;
-  --font-text :'Josefin Sans', sans-serif;
+  --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 1px 2px, #e1e1e1 0px 1px 2px;
+  --font-title : 'Bungee', cursive;
+  --font-text :'Roboto Condensed', sans-serif;
 }
 
 
@@ -20,12 +22,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: var(--main-bg-color);
+  background-color: var(--main-bg-color-color);
   font-family: var(--font-text);
   overflow-x: hidden;
 }
 
-h1, h2 {
+h1 {
   font-family: var(--font-title);
 }
 
@@ -108,14 +110,14 @@ section {
 /********************************************************************* NAV *********************************************************************/ 
 
 .openBurger {
-  z-index: 1;
+  z-index: 2;
   height: 100%;
   padding: 0 0 2rem;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  animation: open 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  animation: open 0.25s cubic-bezier(0.460, 0.460, 0.450, 0.440) both;
 }
 
 @keyframes open {
@@ -135,7 +137,6 @@ section {
   width: 100%;
   font-size: 2rem;
   padding: 2rem 1rem;
-  box-shadow: var(--box-shadow);
   border: none;
 }
 
@@ -158,12 +159,27 @@ button.croix {
 
 .burger {
 height: 2rem;
+transform: rotate(180deg);
 }
 
 .logo {
   height: 4rem;
+  width: auto;
+  margin: 0;
+  padding: 0;
 }
 
+.CTA_home {
+  border: none;
+  box-shadow: var(--box-shadow);
+  padding: 0.5rem 0.75rem;
+  background-color: var(--third-color);
+  margin-bottom: 1rem;
+  border-radius: 0.35rem;
+  font-weight: bolder;
+  font-size: 1rem;
+  color: var(--fourth-color);
+}
 /********************************************************************* HOME *********************************************************************/ 
 .main_container {
   padding: 1rem 3rem;
@@ -179,17 +195,29 @@ height: 2rem;
   margin: 1rem 0 2rem;
 }
 .landing_page h1 {
-  font-size: 2.5rem;
+  font-size: 4rem;
   text-align: center;
+  line-height: 1.2;
+  overflow: hidden;
 }
 .landing_page h1, .landing_page h2 {
   background-color: transparent;
   padding: 0.5rem 2rem;
   z-index: 1;
   margin: 0;
-  color: var(--main-bg-color);
+  text-align: center;
 }
 
+.landing_page h1 {
+  color: var(--fourth-color);
+  text-shadow: var(--third-color) 2px 2px 0px;
+}
+
+.landing_page h2 {
+  color: var(--third-color);
+  margin-top: 3rem;
+  padding: 0 4.5rem;
+}
   .background_img {
     position: absolute;
     background-position: 50%;
@@ -299,6 +327,10 @@ width: 90%;
     display: initial;
   }
 
+  header {
+    flex-direction: row;
+  }
+
 /********************************************************************* NAVBAR *********************************************************************/ 
 .navbar {
   padding: 2rem 0;
@@ -308,5 +340,21 @@ width: 90%;
 .navbar * {
   padding: 0rem 2rem;
 }
-  
+.background_img {
+  position: absolute;
+  background-position: 50%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/********************************************************************* HOME *********************************************************************/ 
+
+.landing_page h1 {
+  color: var(--fourth-color);
+  font-size: 8rem;
+  text-shadow: var(--third-color) 2px 2px 0px;
+}
+.landing_page h2 {
+  font-size: 2rem;
+}
 }

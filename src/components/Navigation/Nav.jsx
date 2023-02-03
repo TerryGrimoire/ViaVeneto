@@ -22,11 +22,6 @@ function Nav({ setOpenBurger }) {
           Services
         </button>
       </Link>
-      <Link to="/Tarifs">
-        <button type="button" onClick={() => setOpenBurger(false)}>
-          Tarifs
-        </button>
-      </Link>
       <Link to="/Contact">
         <button type="button" onClick={() => setOpenBurger(false)}>
           Contact
