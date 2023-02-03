@@ -7,7 +7,7 @@ export default function Home({ helmet }) {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <main className="flex-col">
+    <main className="flex-col home">
       <Helmet>
         <title> {helmet.title} | Accueil </title>
         <link rel="canonical" href={helmet.href} />
@@ -15,9 +15,9 @@ export default function Home({ helmet }) {
       </Helmet>
 
       <Image title={helmet.title} />
-      <section className="section2">
+      <section className="articles_container">
         <article>
-          <h2>Découvez notre entreprise familiale</h2>
+          <h2>Découvrez notre entreprise familiale</h2>
           <img src="" alt="" />
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non,
