@@ -20,7 +20,7 @@ function Image({ title }) {
     alt: "pizzas",
   };
   return (
-    <section className="landing_page container">
+    <div className="landing_page container">
       <h1>{title}</h1>
       <h2>{landingData.h2}</h2>
       <video autoPlay muted loop className="background_img">
@@ -28,7 +28,7 @@ function Image({ title }) {
         Your browser does not support the video tag.
       </video>
       <div className="veil" />
-    </section>
+    </div>
   );
 }
 

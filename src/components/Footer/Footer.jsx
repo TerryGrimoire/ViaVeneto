@@ -5,6 +5,9 @@ import cheque from "../../assets/cheque.png";
 import ticket from "../../assets/chequedej.png";
 import facebook from "../../assets/facebook.svg";
 import instagram from "../../assets/instagram.svg";
+import barket from "../../assets/barket.png";
+import zotlivraison from "../../assets/zotlivraison.png";
+import uber from "../../assets/uber.png";
 
 function Footer() {
   return (
@@ -16,6 +19,26 @@ function Footer() {
           <img src={ticket} alt="tickets restaurants logo" />
           <img src={cheque} alt="cheque accepté logo" />
         </div>
+      </div>
+      <div>
+        <h2>Retrouver nos pizzas sur</h2>
+        <ul className="barket">
+          <a href="https://barket.re">
+            <li>
+              <img src={barket} alt="barket.re" />
+            </li>
+          </a>{" "}
+          <a href="https://zotlivraison.com/stores/planet-pizza-nepc1igoxb6jipu?fbclid=IwAR3n1PDcVYy--VBbIItZjIPmqlPXsldYM7cRJ2ldd--PbV3deytuV13nfQo">
+            <li>
+              <img src={zotlivraison} alt="" />
+            </li>
+          </a>{" "}
+          <a href="https://www.ubereats.com/fr/feed?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMkFyb2QlMkMlMjBsaWJyYWlyaWUlMjByZWxpZ2lldXNlJTJDJTIwU2FpbnQtRGVuaXMlMjA5NzQwMCUyMiUyQyUyMnJlZmVyZW5jZSUyMiUzQSUyMkNoSUpXYng1a3Q1X2dpRVIxdkJzYkp0U3djWSUyMiUyQyUyMnJlZmVyZW5jZVR5cGUlMjIlM0ElMjJnb29nbGVfcGxhY2VzJTIyJTJDJTIybGF0aXR1ZGUlMjIlM0EtMjAuODgzMDE4Njk5OTk5OTklMkMlMjJsb25naXR1ZGUlMjIlM0E1NS40NTkxNjA3JTdE">
+            <li>
+              <img src={uber} alt="" />
+            </li>
+          </a>
+        </ul>
       </div>
       <div className="footer_contact">
         <h2>Nos réseaux sociaux</h2>
@@ -33,6 +56,7 @@ function Footer() {
           </li>
         </ul>
       </div>
+
       <small>
         Designé et développé par le{"  "}
         <a
