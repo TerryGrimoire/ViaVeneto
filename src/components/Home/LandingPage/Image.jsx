@@ -16,7 +16,7 @@ function Image({ title }) {
   */
 
   const landingData = {
-    h2: "Ta pizzeria Hallal préférée à Saint-Denis",
+    h2: "Ta pizzeria halal préférée à Saint-Denis",
     alt: "pizzas",
   };
   return (

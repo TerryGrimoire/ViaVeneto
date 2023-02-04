@@ -31,6 +31,18 @@ h1 {
   font-family: var(--font-title);
 }
 
+
+h2 {
+  text-align: left;
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  color: var(--fourth-color);
+  text-shadow: var(--third-color) 1px 2px 2px;
+  line-height: 1.3;
+  overflow: hidden;
+  margin: 0;
+}
+
 a {
   color: initial;
   text-decoration: none;
@@ -39,10 +51,6 @@ a {
 
 li {
   list-style: none;
-}
-
-section {
-  padding: 2rem 0;
 }
 
 .no_button {
@@ -212,12 +220,6 @@ transform: rotate(180deg);
   color: var(--fourth-color);
   text-shadow: var(--third-color) 2px 2px 0px;
 }
-
-.landing_page h2 {
-  color: var(--third-color);
-  margin-top: 3rem;
-  padding: 0 2.5rem;
-}
   .background_img {
     position: absolute;
     background-position: 50%;
@@ -230,15 +232,69 @@ transform: rotate(180deg);
     width: 100%;
     height: 100%;
     opacity: 60%;
+    top: 2rem;
   }
 
-.home section {
-  padding: 2rem;
+.home section article, .home section div:nth-child(2){
+  padding: 0 2rem;
+}
+
+.home section > div, .home section > article {
+  margin: 2rem 0 0;
 }
 
 .home section * {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
+
+.home section h2 {
+  margin: 2rem 0;
+}
+
+ p, li {
+  font-size: 1.3rem;
+  line-height: 1.7;
+}
+
+ul {
+  padding: 2rem 0;
+}
+
+.home iframe {
+  width: 100%;
+  height: 50vh;
+  margin: 2rem 0 ;
+}
+
+.iframe h2, .iframe p {
+  padding: 0 2rem;
+}
+
+
+
+.landing_page h2 {
+  color: var(--third-color);
+  margin-top: 4rem;
+  padding: 0 5rem;
+  font-family: var(--font-text);
+  text-shadow: none;
+  font-size: 1.35rem;
+}
+
+.home .barket {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .barket img {
+  width: 25vw;
+  height: 3.5rem;
+  object-fit: contain;
+  border-radius: 0.25rem;
+  margin: 1rem;
+  box-shadow: var(--box-shadow);
+}
+
 /********************************************************************* Page 1 *********************************************************************/ 
 
 
@@ -275,15 +331,20 @@ width: 90%;
 
 .footer {
   padding: 1rem 2rem;
-  align-items: flex-start;
   background-color: var(--secondary-bg-color);
   color: var(--main-bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
 .footer * {
-  padding: 0.35rem 0;
+  padding: 0.5rem 0;
   background-color: inherit;
   color: inherit;
+  overflow: hidden;
 }
 
 .footer li, .footer a, .footer div {
@@ -293,8 +354,18 @@ width: 90%;
   width: 100%;
 }
 
+.footer div {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
 .footer img {
-  width: 3rem;
+  width: auto;
+  height: 4rem;
+  object-fit: contain;
   margin: 0 0.25rem;
 }
 
@@ -304,6 +375,24 @@ width: 90%;
   margin: 2rem 1rem 0;
 }
 
+.footer h2 {
+  font-size: 1rem;
+  text-shadow: none;
+  width: 100%;
+  color: var(--third-color);
+}
+
+.footer small, .footer a small.small {
+  text-align: center;
+  width: 100%;
+  font-size: 1rem;
+  overflow: hidden;
+}
+
+.footer .gn {
+  font-weight:600;
+  text-decoration: underline;
+}
 /********************************************************************* MENTIONS *********************************************************************/ 
 .mentions-container {
   padding: 1rem 4rem;
