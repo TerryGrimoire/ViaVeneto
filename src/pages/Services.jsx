@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 import toute from "../assets/toutes.png";
 import sucre from "../assets/sucre.png";
@@ -95,25 +95,36 @@ function Services({ helmet }) {
         <div>
           {pizzas && choice === "" ? (
             <div>
-              <p className="dispo">{pizzas.length - 2} pizzas disponibles</p>
-              {pizzas.map((pizza) => (
-                <div className="pizza">
-                  <h3>{pizza.Nom}</h3>
-                  <p>{pizza.Description}</p>
-                  <div>
-                    <ul>
-                      <li>Pâte italienne</li>
-                      <li>26cm : {pizza.p1} €</li>
-                      <li>33cm : {pizza.p2} €</li>
-                    </ul>
-                    <ul>
-                      <li>Pâte fine</li>
-                      <li>33cm : {pizza.p3} €</li>
-                      <li>40cm : {pizza.p4} €</li>
-                    </ul>
+              <p className="dispo">
+                {
+                  pizzas.filter((el, index) => el.Nom !== "Nom" && index > 1)
+                    .length
+                }{" "}
+                pizzas disponibles
+              </p>
+              {pizzas
+                .filter((el, index) => el.Nom !== "Nom" && index > 1)
+                .map((pizza) => (
+                  <div className="pizza" key={pizza.Nom}>
+                    <div>
+                      <h3>{pizza.Nom}</h3>
+                      <p>{pizza.Description}</p>
+                    </div>
+
+                    <div>
+                      <ul>
+                        <li>Pâte italienne</li>
+                        <li>26cm : {pizza.p1} €</li>
+                        <li>33cm : {pizza.p2} €</li>
+                      </ul>
+                      <ul>
+                        <li>Pâte fine</li>
+                        <li>33cm : {pizza.p3} €</li>
+                        <li>40cm : {pizza.p4} €</li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
           ) : (
             <div>
@@ -127,19 +138,26 @@ function Services({ helmet }) {
               {pizzas
                 .filter((el) => el.Nom !== "Nom" && el.Base === choice)
                 .map((pizza) => (
-                  <div className="pizza">
-                    <h3>{pizza.Nom}</h3>
-                    <p>{pizza.Description}</p>
+                  <div className="pizza" key={pizza.Nom}>
                     <div>
+                      <h3>{pizza.Nom}</h3>
+                      <p>{pizza.Description}</p>
+                    </div>
+
+                    <div className="prix">
                       <ul>
                         <li>Pâte italienne</li>
                         <li>26cm : {pizza.p1} €</li>
                         <li>33cm : {pizza.p2} €</li>
                       </ul>
                       <ul>
-                        <li>Pâte fine</li>
-                        <li>33cm : {pizza.p3} €</li>
-                        <li>40cm : {pizza.p4} €</li>
+                        {pizza.p3 === "-" ? null : (
+                          <>
+                            <li>Pâte fine</li>
+                            <li>33cm : {pizza.p3} €</li>
+                            <li>40cm : {pizza.p4} €</li>
+                          </>
+                        )}
                       </ul>
                     </div>
                   </div>

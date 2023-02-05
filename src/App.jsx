@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
@@ -15,13 +16,15 @@ function App() {
   };
   return (
     <BrowserRouter>
-      <Header helmet={helmet} />
-      <Routes>
-        <Route path="/" element={<Home helmet={helmet} />} />
-        <Route path="/Services" element={<Services helmet={helmet} />} />
-        <Route path="/Mentions" element={<Mentions />} />
-      </Routes>
-      <Footer />
+      <HelmetProvider>
+        <Header helmet={helmet} />
+        <Routes>
+          <Route path="/" element={<Home helmet={helmet} />} />
+          <Route path="/Services" element={<Services helmet={helmet} />} />
+          <Route path="/Mentions" element={<Mentions />} />
+        </Routes>
+        <Footer />
+      </HelmetProvider>
     </BrowserRouter>
   );
 }
