@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
+import { useNavigate } from "react-router-dom";
 
 import toute from "../assets/toutes.png";
 import sucre from "../assets/sucre.png";
@@ -9,8 +10,13 @@ import poisson from "../assets/poisson.png";
 import vege from "../assets/vege.png";
 
 function Services({ helmet }) {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (JSON.parse(sessionStorage.getItem("pizzas")) === null) {
+      navigate("/");
+    }
   }, []);
 
   const pizzas = JSON.parse(sessionStorage.getItem("pizzas"));
