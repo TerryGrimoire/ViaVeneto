@@ -22,7 +22,6 @@ function Services({ helmet }) {
   const pizzas = JSON.parse(sessionStorage.getItem("pizzas"));
 
   const [choice, setChoice] = useState("");
-
   return (
     <div className="menu">
       <Helmet>
@@ -99,75 +98,75 @@ function Services({ helmet }) {
           </button>
         </div>
         <div>
-          {pizzas && choice === "" ? (
+          {pizzas !== null && choice === "" ? (
             <div>
               <p className="dispo">
-                {
+                {pizzas !== null &&
                   pizzas.filter((el, index) => el.Nom !== "Nom" && index > 1)
-                    .length
-                }{" "}
+                    .length}{" "}
                 pizzas disponibles
               </p>
-              {pizzas
-                .filter((el, index) => el.Nom !== "Nom" && index > 1)
-                .map((pizza) => (
-                  <div className="pizza" key={pizza.Nom}>
-                    <div>
-                      <h3>{pizza.Nom}</h3>
-                      <p>{pizza.Description}</p>
-                    </div>
+              {pizzas !== null &&
+                pizzas
+                  .filter((el, index) => el.Nom !== "Nom" && index > 1)
+                  .map((pizza) => (
+                    <div className="pizza" key={pizza.Nom}>
+                      <div>
+                        <h3>{pizza.Nom}</h3>
+                        <p>{pizza.Description}</p>
+                      </div>
 
-                    <div>
-                      <ul>
-                        <li>Pâte italienne</li>
-                        <li>26cm : {pizza.p1} €</li>
-                        <li>33cm : {pizza.p2} €</li>
-                      </ul>
-                      <ul>
-                        <li>Pâte fine</li>
-                        <li>33cm : {pizza.p3} €</li>
-                        <li>40cm : {pizza.p4} €</li>
-                      </ul>
+                      <div>
+                        <ul>
+                          <li>Pâte italienne</li>
+                          <li>26cm : {pizza.p1} €</li>
+                          <li>33cm : {pizza.p2} €</li>
+                        </ul>
+                        <ul>
+                          <li>Pâte fine</li>
+                          <li>33cm : {pizza.p3} €</li>
+                          <li>40cm : {pizza.p4} €</li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
             </div>
           ) : (
             <div>
               <p className="dispo">
-                {
+                {pizzas !== null &&
                   pizzas.filter((el) => el.Nom !== "Nom" && el.Base === choice)
-                    .length
-                }{" "}
+                    .length}{" "}
                 pizzas disponibles
               </p>
-              {pizzas
-                .filter((el) => el.Nom !== "Nom" && el.Base === choice)
-                .map((pizza) => (
-                  <div className="pizza" key={pizza.Nom}>
-                    <div>
-                      <h3>{pizza.Nom}</h3>
-                      <p>{pizza.Description}</p>
-                    </div>
+              {pizzas !== null &&
+                pizzas
+                  .filter((el) => el.Nom !== "Nom" && el.Base === choice)
+                  .map((pizza) => (
+                    <div className="pizza" key={pizza.Nom}>
+                      <div>
+                        <h3>{pizza.Nom}</h3>
+                        <p>{pizza.Description}</p>
+                      </div>
 
-                    <div className="prix">
-                      <ul>
-                        <li>Pâte italienne</li>
-                        <li>26cm : {pizza.p1} €</li>
-                        <li>33cm : {pizza.p2} €</li>
-                      </ul>
-                      <ul>
-                        {pizza.p3 === "-" ? null : (
-                          <>
-                            <li>Pâte fine</li>
-                            <li>33cm : {pizza.p3} €</li>
-                            <li>40cm : {pizza.p4} €</li>
-                          </>
-                        )}
-                      </ul>
+                      <div className="prix">
+                        <ul>
+                          <li>Pâte italienne</li>
+                          <li>26cm : {pizza.p1} €</li>
+                          <li>33cm : {pizza.p2} €</li>
+                        </ul>
+                        <ul>
+                          {pizza.p3 === "-" ? null : (
+                            <>
+                              <li>Pâte fine</li>
+                              <li>33cm : {pizza.p3} €</li>
+                              <li>40cm : {pizza.p4} €</li>
+                            </>
+                          )}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
             </div>
           )}
         </div>
