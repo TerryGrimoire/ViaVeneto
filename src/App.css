@@ -465,6 +465,19 @@ ul {
   padding: 1rem 0 2rem;
 }
 
+.error {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://media1.giphy.com/media/AeWntMyxGFXXi/giphy.gif?cid=ecf05e47wykzwj1rxmsmbd6drkdfvcu6vvppqua53mx2mnzy&rid=giphy.gif&ct=g");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: var(--third-color);
+}
 /******************************************************************************************************************************************/ 
 /********************************************************************* DESKTIOP *********************************************************************/ 
 /******************************************************************************************************************************************/ 

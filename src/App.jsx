@@ -5,6 +5,7 @@ import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Mentions from "./pages/Mentions";
+import Error from "./pages/Error";
 
 import "./App.css";
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/" element={<Home helmet={helmet} />} />
           <Route path="/Services" element={<Services helmet={helmet} />} />
           <Route path="/Mentions" element={<Mentions />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </HelmetProvider>
