@@ -1,43 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
-import papa from "papaparse";
+
+import toute from "../assets/toutes.png";
+import sucre from "../assets/sucre.png";
+import nouveau from "../assets/nouveau.png";
+import viande from "../assets/viande.png";
+import poisson from "../assets/poisson.png";
+import vege from "../assets/vege.png";
 
 function Services({ helmet }) {
-  const [pizzas, setPizzas] = useState([]);
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const prepareData = (data) => {
-    // j correspond aux lignes de A à ZZZ sur fichier Excel
-    // index
-    // line correspond à
-    // index correspond à
-    // key correspond à
+  const pizzas = JSON.parse(sessionStorage.getItem("pizzas"));
 
-    let obj = {};
-    const json = data.map((line, index) => {
-      if (index > 1) {
-        data[9].forEach((key, j) => {
-          if (line[j] !== "" && line[j] !== "PIZZAS") {
-            obj = { ...obj, [key]: line[j] };
-          }
-        });
-      }
-      return obj;
-    });
+  const [choice, setChoice] = useState("");
 
-    json.shift();
-    setPizzas([...new Set(json)]);
-  };
-
-  useEffect(() => {
-    fetch(import.meta.env.VITE_DATA)
-      .then((result) => result.text())
-      .then((text) => papa.parse(text))
-      .then((data) => prepareData(data.data));
-  }, []);
   return (
     <div className="menu">
       <Helmet>
@@ -47,11 +26,77 @@ function Services({ helmet }) {
       </Helmet>
       <section>
         <h1>Nos pizzas</h1>
+        <div className="button_container">
+          <button
+            type="button"
+            className={
+              choice === "" ? "button_Choice choisie" : "button_Choice"
+            }
+            onClick={() => setChoice("")}
+          >
+            <img src={toute} alt="pizza icone" />
+            <p>Toutes</p>
+          </button>
+          <button
+            type="button"
+            className={
+              choice === "nouveautes"
+                ? "button_Choice choisie"
+                : "button_Choice"
+            }
+            onClick={() => setChoice("nouveautes")}
+          >
+            <img src={nouveau} alt="oeuf icone" />
+            <p>Nouveautés</p>
+          </button>
+          <button
+            type="button"
+            className={
+              choice === "Viandes" ? "button_Choice choisie" : "button_Choice"
+            }
+            onClick={() => setChoice("Viandes")}
+          >
+            <img src={viande} alt="viande icone" />
+            <p>Viandes</p>
+          </button>
+          <button
+            type="button"
+            className={
+              choice === "Poissons" ? "button_Choice choisie" : "button_Choice"
+            }
+            onClick={() => setChoice("Poissons")}
+          >
+            <img src={poisson} alt="poisson icone" />
+            <p>Poissons</p>
+          </button>
+          <button
+            type="button"
+            className={
+              choice === "Végétarienne"
+                ? "button_Choice choisie"
+                : "button_Choice"
+            }
+            onClick={() => setChoice("Végétarienne")}
+          >
+            <img src={vege} alt="poivron icone" />
+            <p>Végétarien</p>
+          </button>
+          <button
+            type="button"
+            className={
+              choice === "sucrée" ? "button_Choice choisie" : "button_Choice"
+            }
+            onClick={() => setChoice("sucrée")}
+          >
+            <img src={sucre} alt="cupcake icone" />
+            <p>Sucrée</p>
+          </button>
+        </div>
         <div>
-          {pizzas &&
-            pizzas
-              .filter((el) => el.Nom !== "Nom" && el.Base === "nouveautes")
-              .map((pizza) => (
+          {pizzas && choice === "" ? (
+            <div>
+              <p className="dispo">{pizzas.length - 2} pizzas disponibles</p>
+              {pizzas.map((pizza) => (
                 <div className="pizza">
                   <h3>{pizza.Nom}</h3>
                   <p>{pizza.Description}</p>
@@ -69,6 +114,38 @@ function Services({ helmet }) {
                   </div>
                 </div>
               ))}
+            </div>
+          ) : (
+            <div>
+              <p className="dispo">
+                {
+                  pizzas.filter((el) => el.Nom !== "Nom" && el.Base === choice)
+                    .length
+                }{" "}
+                pizzas disponibles
+              </p>
+              {pizzas
+                .filter((el) => el.Nom !== "Nom" && el.Base === choice)
+                .map((pizza) => (
+                  <div className="pizza">
+                    <h3>{pizza.Nom}</h3>
+                    <p>{pizza.Description}</p>
+                    <div>
+                      <ul>
+                        <li>Pâte italienne</li>
+                        <li>26cm : {pizza.p1} €</li>
+                        <li>33cm : {pizza.p2} €</li>
+                      </ul>
+                      <ul>
+                        <li>Pâte fine</li>
+                        <li>33cm : {pizza.p3} €</li>
+                        <li>40cm : {pizza.p4} €</li>
+                      </ul>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          )}
         </div>
       </section>
     </div>

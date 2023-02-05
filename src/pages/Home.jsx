@@ -1,11 +1,43 @@
 import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
+import papa from "papaparse";
 import Image from "../components/Home/LandingPage/Image";
 
 export default function Home({ helmet }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const prepareData = (data) => {
+    // j correspond aux lignes de A à ZZZ sur fichier Excel
+    // index
+    // line correspond à
+    // index correspond à
+    // key correspond à
+
+    let obj = {};
+    const json = data.map((line, index) => {
+      if (index > 1) {
+        data[9].forEach((key, j) => {
+          if (line[j] !== "" && line[j] !== "PIZZAS") {
+            obj = { ...obj, [key]: line[j] };
+          }
+        });
+      }
+      return obj;
+    });
+
+    json.shift();
+    sessionStorage.setItem("pizzas", JSON.stringify([...new Set(json)]));
+  };
+
+  useEffect(() => {
+    fetch(import.meta.env.VITE_DATA)
+      .then((result) => result.text())
+      .then((text) => papa.parse(text))
+      .then((data) => prepareData(data.data));
+  }, []);
+
   return (
     <main className="flex-col home">
       <Helmet>
