@@ -237,6 +237,13 @@ transform: rotate(180deg);
     margin: 0;
   }
 
+  .landing_page .halal {
+    position: absolute;
+    width: 5rem;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1;
+  }
 .home > section > article, .home > section > div:nth-child(2){
   padding: 0 2rem;
 }

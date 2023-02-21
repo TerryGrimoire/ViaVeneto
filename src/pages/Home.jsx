@@ -50,7 +50,6 @@ export default function Home({ helmet }) {
       <section className="articles_container">
         <article>
           <h2>Découvrez notre entreprise familiale</h2>
-          <img src="" alt="" />
           <p>
             Bienvenue chez Planet Pizza, votre destination pour des pizzas
             délicieuses à Saint-Denis. Ici, chaque pizza est cuite avec soin et
@@ -63,7 +62,6 @@ export default function Home({ helmet }) {
         </article>
         <article>
           <h2>Des pizzas Halal de qualité</h2>
-          <img src="" alt="" />
           <p>
             Nous utilisons les ingrédients les plus frais et conformes aux
             normes halal pour préparer nos pizzas. Tous nos produits sont

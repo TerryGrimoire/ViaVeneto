@@ -1,5 +1,6 @@
 import React from "react";
 import background from "../../../assets/background.mp4";
+import halal from "../../../assets/halal.png";
 
 function Image({ title }) {
   /* Pour utiliser ce composant, suivre les étapes suivantes :
@@ -27,6 +28,7 @@ function Image({ title }) {
         <source src={background} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      <img src={halal} alt="label halal Réunion" className="halal" />
       <div className="veil" />
     </div>
   );
