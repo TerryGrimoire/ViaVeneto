@@ -106,6 +106,14 @@ function Services({ helmet }) {
                     .length}{" "}
                 pizzas disponibles
               </p>
+
+              <div className="dispo">
+                <p>1 pizza achetée = une boisson offerte</p>
+                <p>3 pizzas achetées = une bouteille offerte (1.5L)</p>
+                <p>Moitié-moitié : 1€ de plus</p>
+                <p>Calzone : 3€ de plus</p>
+              </div>
+
               {pizzas !== null &&
                 pizzas
                   .filter((el, index) => el.Nom !== "Nom" && index > 1)
@@ -139,6 +147,12 @@ function Services({ helmet }) {
                     .length}{" "}
                 pizzas disponibles
               </p>
+              <div className="dispo">
+                <p>1 pizza achetée = une boisson offerte</p>
+                <p>3 pizzas achetées = une bouteille offerte (1.5L)</p>
+                <p>moitié-moitié : 1€ de plus</p>
+                <p>Calzone : 3€ de plus</p>
+              </div>
               {pizzas !== null &&
                 pizzas
                   .filter((el) => el.Nom !== "Nom" && el.Base === choice)
