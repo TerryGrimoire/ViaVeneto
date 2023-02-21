@@ -108,10 +108,13 @@ function Services({ helmet }) {
               </p>
 
               <div className="dispo">
-                <p>1 pizza achetée = une boisson offerte</p>
-                <p>3 pizzas achetées = une bouteille offerte (1.5L)</p>
-                <p>Moitié-moitié : 1€ de plus</p>
-                <p>Calzone : 3€ de plus</p>
+                <small>1 pizza achetée = une boisson offerte</small>
+                <small>3 pizzas achetées = une bouteille offerte (1.5L)</small>
+                <small>Moitié-moitié : 1€ de plus</small>
+                <small>Calzone : 3€ de plus</small>
+                <small>
+                  <strong>Nouveau :</strong> Formule du midi & bar à salade
+                </small>
               </div>
 
               {pizzas !== null &&
@@ -148,10 +151,13 @@ function Services({ helmet }) {
                 pizzas disponibles
               </p>
               <div className="dispo">
-                <p>1 pizza achetée = une boisson offerte</p>
-                <p>3 pizzas achetées = une bouteille offerte (1.5L)</p>
-                <p>moitié-moitié : 1€ de plus</p>
-                <p>Calzone : 3€ de plus</p>
+                <small>1 pizza achetée = une boisson offerte</small>
+                <small>3 pizzas achetées = une bouteille offerte (1.5L)</small>
+                <small>Moitié-moitié : 1€ de plus</small>
+                <small>Calzone : 3€ de plus</small>
+                <small>
+                  <strong>Nouveau :</strong> Formule du midi & bar à salade
+                </small>
               </div>
               {pizzas !== null &&
                 pizzas

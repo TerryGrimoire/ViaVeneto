@@ -427,6 +427,14 @@ ul {
   width: 100%;
   margin: 2rem 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu .dispo > * {
+  margin: 0.5rem 0;
 }
 .pizza {
   display: flex;
@@ -472,11 +480,17 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url("https://media1.giphy.com/media/AeWntMyxGFXXi/giphy.gif?cid=ecf05e47wykzwj1rxmsmbd6drkdfvcu6vvppqua53mx2mnzy&rid=giphy.gif&ct=g");
+  background-image: url("https://media2.giphy.com/media/l0Exf5Cyh69TNFdrq/giphy.gif?cid=ecf05e47v9b1pp0hbfil3wv8j344mkjbgczu66vs90b0wnoi&rid=giphy.gif&ct=g");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: var(--third-color);
+  color: var(--main-bg-color);
+  font-weight: bolder;
+}
+
+.error h1 {
+  font-size: 10vw;
+  text-align: center;
 }
 /******************************************************************************************************************************************/ 
 /********************************************************************* DESKTIOP *********************************************************************/ 
@@ -655,6 +669,11 @@ text-align: left;
   width: 100%;
   margin: 2rem 0;
   text-align: center;
+  flex-direction: row;
+}
+
+.menu .dispo > * {
+  margin: 1rem ;
 }
 .pizza {
   display: flex;
