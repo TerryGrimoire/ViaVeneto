@@ -103,10 +103,10 @@ export default function Home({ helmet }) {
 
           <ul>
             <li>Lundi : Fermé</li>
-            <li>Mardi : 11h-14h | 18h-22h</li>
-            <li>Mercredi : 11h-14h | 18h-22h</li>
-            <li>Jeudi : 11h-14h | 18h-22h</li>
-            <li>Vendredi : 11h-14h | 18h-22h</li>
+            <li>Mardi : 11h-13h30 | 18h-22h</li>
+            <li>Mercredi : 11h-13h30 | 18h-22h</li>
+            <li>Jeudi : 11h-13h30 | 18h-22h</li>
+            <li>Vendredi : 11h-13h30 | 18h-22h</li>
             <li>Samedi : 18h-22h</li>
             <li>Dimanche :18h-22h</li>
           </ul>
