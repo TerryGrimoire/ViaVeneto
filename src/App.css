@@ -499,6 +499,35 @@ ul {
   font-size: 10vw;
   text-align: center;
 }
+
+.dispo strong span {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.nouveau {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 0 0;
+}
+
+.nouveau img {
+  width: 3rem;
+  margin: 0 1rem;
+}
+
+.nouveau div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.nouveau div small {
+  margin: 0.25rem 0;
+}
 /******************************************************************************************************************************************/ 
 /********************************************************************* DESKTIOP *********************************************************************/ 
 /******************************************************************************************************************************************/ 
@@ -728,6 +757,30 @@ text-align: left;
 .pizza p {
   width: 100%;
   padding: 0rem 0 2rem;
+}
+.nouveau {
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+.nouveau * {
+  margin-right: 0.5rem;
+}
+
+.nouveau h3 {
+  font-size: 1.2rem;
+}
+
+.nouveau img {
+  width: 2rem;
+  height: auto;
+}
+
+.nouveau div {
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 30%;
+  padding: 0.25rem 0 0;
 }
 /********************************************************************* FOOTER *********************************************************************/ 
 

@@ -8,6 +8,7 @@ import nouveau from "../assets/nouveau.png";
 import viande from "../assets/viande.png";
 import poisson from "../assets/poisson.png";
 import vege from "../assets/vege.png";
+import news from "../assets/new.png";
 
 function Services({ helmet }) {
   const navigate = useNavigate();
@@ -112,9 +113,15 @@ function Services({ helmet }) {
                 <small>3 pizzas achetées = une bouteille offerte (1.5L)</small>
                 <small>Moitié-moitié : 1€ de plus</small>
                 <small>Calzone : 3€ de plus</small>
-                <small>
-                  <strong>Nouveau :</strong> Formule du midi & bar à salade
-                </small>
+                <div className="nouveau">
+                  <img src={news} alt="nouveau" />
+                  <h3>Salade à composer : 8,50€</h3>
+                  <div>
+                    <small>2 bases aux choix </small>
+                    <small>4 ingrédients</small>
+                    <small>1 viande ou poisson</small>
+                  </div>
+                </div>
               </div>
 
               {pizzas !== null &&
