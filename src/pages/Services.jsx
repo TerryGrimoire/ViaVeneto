@@ -134,17 +134,29 @@ function Services({ helmet }) {
                         <p>{pizza.Description}</p>
                       </div>
 
-                      <div>
-                        <ul>
-                          <li>Pâte italienne</li>
-                          <li>26cm : {pizza.p1} €</li>
-                          <li>33cm : {pizza.p2} €</li>
-                        </ul>
-                        <ul>
-                          <li>Pâte fine</li>
-                          <li>33cm : {pizza.p3} €</li>
-                          <li>40cm : {pizza.p4} €</li>
-                        </ul>
+                      <div className="prix">
+                        {pizza.p2 === "-" ? (
+                          <ul>
+                            <li>Prix </li>
+                            <li>{pizza.p1} €</li>
+                          </ul>
+                        ) : (
+                          <>
+                            {" "}
+                            <ul>
+                              <li>Pâte italienne</li>
+                              <li>26cm : {pizza.p1} €</li>
+                              <li>33cm : {pizza.p2} €</li>
+                            </ul>
+                            {pizza.p3 === "-" ? null : (
+                              <ul>
+                                <li>Pâte fine</li>
+                                <li>33cm : {pizza.p3} €</li>
+                                <li>40cm : {pizza.p4} €</li>
+                              </ul>
+                            )}
+                          </>
+                        )}
                       </div>
                     </div>
                   ))}
@@ -177,20 +189,28 @@ function Services({ helmet }) {
                       </div>
 
                       <div className="prix">
-                        <ul>
-                          <li>Pâte italienne</li>
-                          <li>26cm : {pizza.p1} €</li>
-                          <li>33cm : {pizza.p2} €</li>
-                        </ul>
-                        <ul>
-                          {pizza.p3 === "-" ? null : (
-                            <>
-                              <li>Pâte fine</li>
-                              <li>33cm : {pizza.p3} €</li>
-                              <li>40cm : {pizza.p4} €</li>
-                            </>
-                          )}
-                        </ul>
+                        {pizza.p2 === "-" ? (
+                          <ul>
+                            <li>Prix </li>
+                            <li>{pizza.p1} €</li>
+                          </ul>
+                        ) : (
+                          <>
+                            {" "}
+                            <ul>
+                              <li>Pâte italienne</li>
+                              <li>26cm : {pizza.p1} €</li>
+                              <li>33cm : {pizza.p2} €</li>
+                            </ul>
+                            {pizza.p3 === "-" ? null : (
+                              <ul>
+                                <li>Pâte fine</li>
+                                <li>33cm : {pizza.p3} €</li>
+                                <li>40cm : {pizza.p4} €</li>
+                              </ul>
+                            )}
+                          </>
+                        )}
                       </div>
                     </div>
                   ))}

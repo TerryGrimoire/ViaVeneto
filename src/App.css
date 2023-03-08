@@ -463,8 +463,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  width: 100vw;
 }
 
+ul {
+  width: 100%;
+}
 .pizza li {
   padding: 0 1rem;
 }
