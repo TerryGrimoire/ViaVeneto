@@ -336,7 +336,8 @@ ul {
 }
 .locaux img {
   height: 2rem;
-  width: fit-content;
+  width: auto;
+  object-fit: contain;
   margin-right: 2rem;
 }
 /********************************************************************* FOOTER *********************************************************************/ 
