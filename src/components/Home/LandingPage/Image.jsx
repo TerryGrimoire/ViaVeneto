@@ -1,6 +1,6 @@
 import React from "react";
 import background from "../../../assets/background.jpg";
-import halal from "../../../assets/halal.png";
+
 
 function Image({ title }) {
   /* Pour utiliser ce composant, suivre les étapes suivantes :
