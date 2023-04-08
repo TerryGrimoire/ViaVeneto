@@ -17,7 +17,7 @@ function Nav({ setOpenBurger }) {
           Accueil
         </button>
       </Link>
-      <Link to="/Services">
+      <Link to="/Menu">
         <button type="button" onClick={() => setOpenBurger(false)}>
           Services
         </button>

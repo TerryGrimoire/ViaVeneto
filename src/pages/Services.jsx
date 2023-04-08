@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate } from "react-router-dom";
 
-import toute from "../assets/toutes.png";
-import sucre from "../assets/sucre.png";
-import nouveau from "../assets/nouveau.png";
-import viande from "../assets/viande.png";
-import poisson from "../assets/poisson.png";
-import vege from "../assets/vege.png";
+import plat from "../assets/plat.png";
+import dessert from "../assets/dessert.png";
+import pizzaImg from "../assets/pizza.png";
+import salade from "../assets/salade.png";
+import boisson from "../assets/boisson.png";
+import pate from "../assets/pate.png";
 import news from "../assets/new.png";
 
 function Services({ helmet }) {
@@ -40,8 +40,8 @@ function Services({ helmet }) {
             }
             onClick={() => setChoice("")}
           >
-            <img src={toute} alt="pizza icone" />
-            <p>Toutes</p>
+            <img src={plat} alt="pizza icone" />
+            <p>Les plats</p>
           </button>
           <button
             type="button"
@@ -52,8 +52,8 @@ function Services({ helmet }) {
             }
             onClick={() => setChoice("nouveautes")}
           >
-            <img src={nouveau} alt="oeuf icone" />
-            <p>Nouveautés</p>
+            <img src={pizzaImg} alt="oeuf icone" />
+            <p>Pizzas</p>
           </button>
           <button
             type="button"
@@ -62,8 +62,8 @@ function Services({ helmet }) {
             }
             onClick={() => setChoice("Viandes")}
           >
-            <img src={viande} alt="viande icone" />
-            <p>Viandes</p>
+            <img src={pate} alt="viande icone" />
+            <p>Pâtes</p>
           </button>
           <button
             type="button"
@@ -72,8 +72,8 @@ function Services({ helmet }) {
             }
             onClick={() => setChoice("Poissons")}
           >
-            <img src={poisson} alt="poisson icone" />
-            <p>Poissons</p>
+            <img src={salade} alt="poisson icone" />
+            <p>Salades</p>
           </button>
           <button
             type="button"
@@ -84,8 +84,8 @@ function Services({ helmet }) {
             }
             onClick={() => setChoice("Végétarienne")}
           >
-            <img src={vege} alt="poivron icone" />
-            <p>Végétarien</p>
+            <img src={dessert} alt="poivron icone" />
+            <p>Desserts</p>
           </button>
           <button
             type="button"
@@ -94,8 +94,8 @@ function Services({ helmet }) {
             }
             onClick={() => setChoice("sucrée")}
           >
-            <img src={sucre} alt="cupcake icone" />
-            <p>Sucrée</p>
+            <img src={boisson} alt="cupcake icone" />
+            <p>Boissons</p>
           </button>
         </div>
         <div>

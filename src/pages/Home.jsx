@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import papa from "papaparse";
 import Image from "../components/Home/LandingPage/Image";
 
+import loc from "../assets/loc.png";
+import tel from "../assets/tel.png";
+
 export default function Home({ helmet }) {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,25 +52,25 @@ export default function Home({ helmet }) {
       <Image title={helmet.title} />
       <section className="articles_container">
         <article>
-          <h2>Découvrez notre entreprise familiale</h2>
+          <h2>Ouvert depuis plus de 35 ans.</h2>
           <p>
-            Bienvenue chez Planet Pizza, votre destination pour des pizzas
-            délicieuses à Saint-Denis. Ici, chaque pizza est cuite avec soin et
-            amour dans nos fours. Nous sommes fiers d'être une entreprise
-            familiale qui offre des pizzas délicieuses à nos clients depuis de
-            nombreuses années. Que vous optiez pour une margherita classique,
-            une pepperoni épicée, ou quelque chose de plus original, nous avons
-            la pizza parfaite pour vous.
+            C'est en 1988 que Fabienne et Serge ont ouvert le Via Veneto à Saint
+            Denis. Au fil des années, ils ont su faire de leur restaurant un
+            lieu convivial, authentique et familial. Ici, les plats
+            méditerranéens sont à l'honneur. On les cuisine avec rigueur et
+            générosité pour assurer à chaque client une expérience gustative
+            satisfaisante mêlant tradition et passion.
           </p>
         </article>
         <article>
-          <h2>Des pizzas Halal de qualité</h2>
+          <h2>Des plats de qualité</h2>
           <p>
-            Nous utilisons les ingrédients les plus frais et conformes aux
-            normes halal pour préparer nos pizzas. Tous nos produits sont
-            d'ailleurs labelisés halal Réunion. Nous attachons un soin
-            particulier à la selection de nos ingrédients et à la satisfaction
-            de vos papilles.
+            Nous proposons une variétés de plats faits maisons qui émerveillent
+            les papilles de nos clients depuis de nombreuses années. Nos
+            produits sont séléctionnés avec minutie, nos pizzas sont faites avec
+            la vraie pâte à l'italienne et nos recettes nous viennent tout droit
+            de notre héritage familiale. C'est en celà que notre cuisine a un
+            caractère si particulier.
           </p>
         </article>
       </section>
@@ -76,39 +79,53 @@ export default function Home({ helmet }) {
           <h2>Nous retrouver</h2>
           <div className="locaux">
             <p>
-              Nous sommes ravis de vous retrouver dans nos locaux à Saint-Denis.
+              <img src={loc} alt="icone pour localisation" />
+              <span className="gras">
+                151 Rue Jules Auber, Saint-Denis 97400, La Réunion
+              </span>
             </p>
+            <p>
+              <img src={tel} alt="icone pour téléphone" />
+              <a href="tel:+262262219271" className="gras">
+                02 62 21 92 71
+              </a>
+            </p>
+
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1262.0745646142047!2d55.45360514743608!3d-20.8829594607785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21827f06fb2d8581%3A0x24bcf04f3459092f!2s94%20Rue%20Sainte-Marie%2C%20Saint-Denis%2097400%2C%20La%20R%C3%A9union!5e0!3m2!1sfr!2sfr!4v1675499040432!5m2!1sfr!2sfr"
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14910.940523409725!2d55.4543619!3d-20.8827236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21827fe74ecf7ed9%3A0xd3403e7b6b2701d6!2sVia%20Veneto!5e0!3m2!1sfr!2sfr!4v1680977961123!5m2!1sfr!2sfr"
               title="google maps"
             />
           </div>
         </div>
         <div>
-          <h2>Nous contacter</h2>
-          <div>
-            <p>
-              Téléphone :<a href="tel:+262262 47 78 61"> 02 62 47 78 61</a>
-            </p>
-            <p>
-              Email : {"  "}
-              <a
-                href="mailto:mathieugueguin@live.fr
-"
-              >
-                mathieugueguin@live.fr
-              </a>
-            </p>
-          </div>
+          <h2>Nos horaires</h2>
 
-          <ul>
-            <li>Lundi : Fermé</li>
-            <li>Mardi : 11h-13h30 | 18h-22h</li>
-            <li>Mercredi : 11h-13h30 | 18h-22h</li>
-            <li>Jeudi : 11h-13h30 | 18h-22h</li>
-            <li>Vendredi : 11h-13h30 | 18h-22h</li>
-            <li>Samedi : 18h-22h</li>
-            <li>Dimanche :18h-22h</li>
+          <ul className="horaires">
+            <li>
+              <h5>Lundi :</h5> <span>Fermé</span>{" "}
+            </li>
+            <li>
+              <h5>Mardi :</h5> <span>11h45 - 13h45 </span>{" "}
+              <span>18h00 - 21h30</span>
+            </li>
+            <li>
+              <h5>Mercredi :</h5> <span>11h45 - 13h45 </span>{" "}
+              <span> 18h00 - 21h30</span>
+            </li>
+            <li>
+              <h5>Jeudi :</h5> <span>11h45 - 13h45</span>{" "}
+              <span>18h00 - 21h30</span>
+            </li>
+            <li>
+              <h5>Vendredi : </h5> <span>11h45 - 13h45 </span>{" "}
+              <span>18h30 - 22h00</span>
+            </li>
+            <li>
+              <h5>Samedi :</h5> <span>18h30 - 22h00</span>
+            </li>
+            <li>
+              <h5>Dimanche :</h5> <span>18h30 - 22h00</span>
+            </li>
           </ul>
         </div>
       </section>

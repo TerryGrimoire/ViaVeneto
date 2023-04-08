@@ -6,12 +6,12 @@ function Mentions() {
   }, []);
 
   const information = {
-    siteLink: " https://planetpizza.netlify.app ",
-    companyName: " Planet Pizza ",
-    ownerName: " Mathieu Gueguin ",
-    email: " mathieugueguin@live.fr ",
-    phone: " 0262477861 ",
-    address: " 94 rue saint-marie, st Denis",
+    siteLink: " https://viaveneto.grimoirenumerique.re ",
+    companyName: " Via Veneto ",
+    ownerName: " Fabienne BUISSON ",
+    email: " belok.ely@wanadoo.fr ",
+    phone: " 02 62 21 92 71 ",
+    address: " 151 Rue Jules Auber, Saint-Denis 97400, La Réunion",
     hostName: " Hostinger ",
     hostAddress: " 143 Rue Emile Julien, 34070 Montpellier, France",
     hostPhone: " 08 92 97 70 93 ",

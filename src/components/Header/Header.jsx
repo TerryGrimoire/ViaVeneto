@@ -1,16 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../../assets/logo.png";
 
-function Burger({ helmet }) {
+function Burger() {
   return (
     <header className="flex padding-header justify-between align-center">
       <Link to="/">
-        <img src={logo} alt={`logo de ${helmet.title}`} className="logo" />
+        <h2>Via Veneto</h2>
       </Link>
-      <Link to="/Services">
+      <Link to="/Menu">
         <button className="CTA_home" type="button">
-          Nos pizzas
+          Notre menu
         </button>
       </Link>
     </header>

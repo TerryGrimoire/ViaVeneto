@@ -11,9 +11,9 @@ import "./App.css";
 
 function App() {
   const helmet = {
-    title: "Planet Pizza",
-    href: "https://changehref.com",
-    description: "Les pizzas Hallal de Saint-Denis",
+    title: "Via Veneto",
+    href: "https://viaveneto.grimoire",
+    description: "Une cuisine traditionnelle qui a fait ses preuves",
   };
   return (
     <BrowserRouter>
@@ -21,7 +21,7 @@ function App() {
         <Header helmet={helmet} />
         <Routes>
           <Route path="/" element={<Home helmet={helmet} />} />
-          <Route path="/Services" element={<Services helmet={helmet} />} />
+          <Route path="/Menu" element={<Services helmet={helmet} />} />
           <Route path="/Mentions" element={<Mentions />} />
           <Route path="*" element={<Error />} />
         </Routes>
