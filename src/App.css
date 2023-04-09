@@ -636,14 +636,45 @@ ul {
 
 .home section:nth-child(3) > div:last-of-type {
 display: flex;
-justify-content: flex-start;
-align-items: flex-start;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 width: 100%;
 margin-bottom: 0;
 padding: 4rem 0;
 text-align: left;
 }
+.home section:nth-child(3) > div:last-of-type .horaires {
+font-weight: 100;
 
+}
+.horaires li {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:flex-start;
+  align-items: flex-start;
+  margin: 1rem 0;
+  text-align: flex-end;
+
+}
+
+.horaires li:nth-of-type(6), .horaires li:nth-of-type(7) {
+  justify-content: space-between;
+  width: 86%;
+}
+.horaires li span {
+  width: 30%;
+  text-align: start;
+}
+
+.horaires li h5 {
+  width: 30%;
+}
+
+.horaires li span:nth-child(3) {
+  text-align: start;
+  width: 30%;
+}
 .home section:nth-child(3) > div:last-of-type > * {
   width: 50%;
   padding: 0;
