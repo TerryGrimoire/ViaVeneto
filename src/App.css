@@ -334,10 +334,19 @@ ul {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.locaux img {
+.home .locaux  img {
+  min-width: none;
   height: 2rem;
-  min-width: fit-content;
+  width: auto;
   margin-right: 2rem;
+}
+
+.home section.retrouve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 /********************************************************************* FOOTER *********************************************************************/ 
 
@@ -696,14 +705,7 @@ font-weight: 100;
   text-shadow: var(--main-bg-color);
 }
 
-.home section:nth-child(3) > div:first-of-type img {
-  width: 5rem;
-  height: 2.5rem;
-  object-fit: cover;
-  padding: 0.45rem;
-  background-color: var(--main-bg-color);
-  text-align: left;
-}
+
 
 .home .locaux {
   width: 100%;
@@ -712,16 +714,18 @@ font-weight: 100;
   margin: 0;
 }
 
-.home .locaux p {
-  padding: 0 2rem;
-  margin: 0;
-}
-
 .home iframe  {
   width: 100%;
   height: 25rem;
   margin:1rem 0 0;
   border: none;
+}
+
+.locaux img {
+  height: 3rem;
+  width: auto;
+  min-width: auto;
+  margin-right: 2rem;
 }
 
 /********************************************************************* PIZZAS *********************************************************************/ 
@@ -770,13 +774,12 @@ font-weight: 100;
 .menu .dispo > * {
   margin: 1rem ;
 }
-.pizza {
+.plats {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
   justify-content: space-between;
-  padding: 0 0 1rem 5rem;
-  border-top: black 1px dashed ;
+  padding: 1rem 15rem;
 }
 .pizza h3 {
   width: 100%;

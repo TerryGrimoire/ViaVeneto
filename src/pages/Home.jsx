@@ -43,7 +43,7 @@ export default function Home({ helmet }) {
           </p>
         </article>
       </section>
-      <section>
+      <section className="retrouve">
         <div className="iframe">
           <h2>Nous retrouver</h2>
           <div className="locaux">
