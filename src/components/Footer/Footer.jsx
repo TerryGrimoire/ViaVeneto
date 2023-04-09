@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import cb from "../../assets/visa.png";
-import cheque from "../../assets/cheque.png";
+import mc from "../../assets/mc.png";
+import tk from "../../assets/tickets.png";
+import cheque from "../../assets/logo-cheque.gif";
 import ticket from "../../assets/chequedej.png";
 import facebook from "../../assets/facebook.svg";
 import barket from "../../assets/barket.png";
@@ -13,7 +15,9 @@ function Footer() {
         <h2>Moyens de paiement acceptés</h2>
         <div className="flex">
           <img src={cb} alt="mastercard logo" />
+          <img src={mc} alt="tickets restaurants logo" />
           <img src={ticket} alt="tickets restaurants logo" />
+          <img src={tk} alt="tickets restaurants logo" />
           <img src={cheque} alt="cheque accepté logo" />
         </div>
       </div>
