@@ -136,13 +136,19 @@ function Services({ helmet }) {
             résultats disponibles
           </p>
           <div className="dispo">
-            <small>1 pizza achetée = une boisson offerte</small>
-            <small>3 pizzas achetées = une bouteille offerte (1.5L)</small>
-            <small>Moitié-moitié : 1€ de plus</small>
-            <small>Calzone : 3€ de plus</small>
-            <small>
-              <strong>Nouveau :</strong> Formule du midi & bar à salade
-            </small>
+            {choice === "pizza" && (
+              <div>
+                <h4>Suppléments</h4>
+                <ul className="supp">
+                  <li>1 € pour tout supplément</li>
+                  <li>
+                    2 € pour les suppléments viande, poisson, chèvre ou
+                    roquefort
+                  </li>
+                  <li>3€ pour le supplément crevette</li>
+                </ul>
+              </div>
+            )}
           </div>
           <div>
             {pizzas !== null &&

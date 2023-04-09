@@ -5,8 +5,8 @@
 
   --main-bg-color : #FFFFFF;
   --secondary-bg-color : #191919;
-  --third-color : #FFEC2E;
-  --fourth-color : #EE340A;
+  --third-color : #49617B;
+  --fourth-color : #f1f1f1;
   --button-color: #0055FF;
   --box-shadow: #e1e1e1 0px 1px 3px, #e1e1e1 0px 1px 3px, #e1e1e1 0px 1px 3px;
   --font-title : 'Parisienne', cursive;
@@ -333,14 +333,21 @@ ul {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  text-align: start;
 }
 .home .locaux  img {
-  min-width: none;
   height: 2rem;
   width: auto;
   margin-right: 2rem;
 }
 
+.home .locaux span {
+  width: 80%;
+}
+.supp li {
+  font-size: 0.85rem;
+
+}
 .home section.retrouve {
   display: flex;
   flex-direction: column;
@@ -400,7 +407,7 @@ ul {
   font-size: 1rem;
   text-shadow: none;
   width: 100%;
-  color: var(--third-color);
+  color: var(--main-bg-color);
   font-family: inherit;
 }
 
@@ -468,7 +475,7 @@ ul {
 }
 
 .menu .choisie {
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
   color: var(--main-bg-color);
 }
 
@@ -488,7 +495,7 @@ ul {
 .plats {
   display: flex;
   flex-direction: column;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   width: 100%;
 }
 
@@ -630,13 +637,13 @@ ul {
 }
 
 .home section article:first-of-type h2 {
-  color: var(--third-color);
-  text-shadow: var(--fourth-color) 2px 2px 0px;
+  color: var(--fourth-color);
+  text-shadow: var(--third-color) 2px 2px 0px;
 }
 
 .home section:nth-child(3) {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -716,16 +723,39 @@ font-weight: 100;
 
 .home iframe  {
   width: 100%;
-  height: 25rem;
-  margin:1rem 0 0;
+  height: 40rem;
+  margin:0;
+  padding: 0;
   border: none;
 }
 
+.home .iframe h2 {
+  text-align: center;
+}
+.home .iframe * {
+  text-align: center;
+  color: #e1e1e1;
+}
+.home .iframe p {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+ 
+}
+
+.home .iframe p span {
+  width: fit-content;
+}
+
 .locaux img {
-  height: 3rem;
+  height: 5rem;
   width: auto;
   min-width: auto;
   margin-right: 2rem;
+  background-color: var(--main-bg-color);
+  border-radius: 50%;
+  padding: 0.2rem;
 }
 
 /********************************************************************* PIZZAS *********************************************************************/ 
@@ -760,7 +790,7 @@ font-weight: 100;
 }
 
 .menu .choisie {
-  background-color: var(--fourth-color);
+  background-color: var(--third-color);
   color: var(--main-bg-color);
 }
 
@@ -897,7 +927,6 @@ font-weight: 100;
   font-size: 1rem;
   text-shadow: none;
   width: 100%;
-  color: var(--third-color);
 }
 
 .footer small, .footer a small.small {
