@@ -4,6 +4,8 @@ import Image from "../components/Home/LandingPage/Image";
 
 import loc from "../assets/loc.png";
 import tel from "../assets/tel.png";
+import cal from "../assets/cal.png";
+import op from "../assets/op.png";
 
 export default function Home({ helmet }) {
   useEffect(() => {
@@ -21,7 +23,7 @@ export default function Home({ helmet }) {
       <Image title={helmet.title} />
       <section className="articles_container">
         <article>
-          <h2>Ouvert depuis plus de 35 ans.</h2>
+          <h2>Ouvert depuis plus de 35 ans</h2>
           <p>
             C'est en 1988 que Fabienne et Serge ont ouvert le Via Veneto à Saint
             Denis. Au fil des années, ils ont su faire de leur restaurant un
@@ -50,25 +52,33 @@ export default function Home({ helmet }) {
             <p>
               <img src={loc} alt="icone pour localisation" />
               <span className="gras">
-                151 Rue Jules Auber, Saint-Denis 97400, La Réunion
+                151 Rue Jules Auber, Saint-Denis, 97400, La Réunion
               </span>
             </p>
             <p>
               <img src={tel} alt="icone pour téléphone" />
-              <a href="tel:+262262219271" className="gras">
-                02 62 21 92 71
-              </a>
+              <span className="gras">
+                Réservez une table directement au{" "}
+                <a href="tel:+262262219271">0262219271</a>
+              </span>
             </p>
-
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14910.940523409725!2d55.4543619!3d-20.8827236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21827fe74ecf7ed9%3A0xd3403e7b6b2701d6!2sVia%20Veneto!5e0!3m2!1sfr!2sfr!4v1680977961123!5m2!1sfr!2sfr"
-              title="google maps"
-            />
+            <p>
+              <img src={cal} alt="icone représantant un calendrier" />
+              <span className="gras">
+                Ouvert du mardi au dimanche. Fermé le lundi.
+              </span>
+            </p>
           </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14910.940523409725!2d55.4543619!3d-20.8827236!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21827fe74ecf7ed9%3A0xd3403e7b6b2701d6!2sVia%20Veneto!5e0!3m2!1sfr!2sfr!4v1680977961123!5m2!1sfr!2sfr"
+            title="google maps"
+          />
         </div>
-        <div>
-          <h2>Nos horaires</h2>
-
+        <div className="hor">
+          <div>
+            <h2>Nos horaires d'ouverture</h2>
+            <img src={op} alt="open store" className="desktop open" />
+          </div>
           <ul className="horaires">
             <li>
               <h5>Lundi :</h5> <span>Fermé</span>{" "}

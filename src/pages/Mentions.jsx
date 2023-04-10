@@ -6,7 +6,7 @@ function Mentions() {
   }, []);
 
   const information = {
-    siteLink: " https://viaveneto.grimoirenumerique.re ",
+    siteLink: " https://viaveneto.grimoire.re ",
     companyName: " Via Veneto ",
     ownerName: " Fabienne BUISSON ",
     email: " belok.ely@wanadoo.fr ",

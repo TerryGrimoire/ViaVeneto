@@ -162,6 +162,9 @@ button.croix {
 }
 
 .padding-header {
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: center;
   padding: 0.5rem;
 }
 
@@ -180,13 +183,19 @@ transform: rotate(180deg);
 .CTA_home {
   border: none;
   box-shadow: var(--box-shadow);
-  padding: 0.5rem 0.75rem;
+  padding: 0.75rem 0.5rem;
   background-color: var(--third-color);
-  margin-bottom: 1rem;
   border-radius: 0.35rem;
   font-weight: bolder;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--fourth-color);
+}
+
+header a {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 /********************************************************************* HOME *********************************************************************/ 
 .main_container {
@@ -291,7 +300,10 @@ ul {
 .gras {
   font-weight: bold;
 }
-
+.gras a {
+  font-weight: bold;
+  text-decoration: underline;
+}
 
 
 .home .barket {
@@ -589,6 +601,7 @@ ul {
 
   header {
     flex-direction: row;
+    align-items: center;
   }
 
 /********************************************************************* NAVBAR *********************************************************************/ 
@@ -652,24 +665,35 @@ ul {
 
 .home section:nth-child(3) > div:last-of-type {
 display: flex;
-flex-direction: column;
+flex-direction: row;
 justify-content: center;
-align-items: center;
+align-items: flex-start;
 width: 100%;
 margin-bottom: 0;
-padding: 4rem 0;
+padding: 4rem;
 text-align: left;
+}
+.home section:nth-child(3) > div:last-of-type h2 {
+  text-align: center;
 }
 .home section:nth-child(3) > div:last-of-type .horaires {
 font-weight: 100;
+display: flex;
+flex-direction: column;
+width: 50vw;
+}
 
+.home section:nth-child(3) > div:last-of-type >div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .horaires li {
   display: flex;
   flex-wrap: wrap;
   justify-content:flex-start;
   align-items: flex-start;
-  margin: 1rem 0;
+  margin: 0;
   text-align: flex-end;
 
 }
@@ -692,8 +716,7 @@ font-weight: 100;
   width: 30%;
 }
 .home section:nth-child(3) > div:last-of-type > * {
-  width: 50%;
-  padding: 0;
+  width: 80%;
 }
 .home section:nth-child(3) > div:last-of-type h2 {
   padding-left: 2rem;
@@ -705,14 +728,20 @@ font-weight: 100;
   background-color: var(--third-color);
   display: flex;
   flex-direction: column;
+  background-image: url("./assets//back2.png");
+  background-size:20%;
+}
+
+
+.hor {
+  background-image: url("./assets//back.png");
+  background-size:20%;
 }
 
 .home section:nth-child(3) > div:first-of-type  h2 {
   color: var(--fourth-color);
   text-shadow: var(--main-bg-color);
 }
-
-
 
 .home .locaux {
   width: 100%;
@@ -732,10 +761,7 @@ font-weight: 100;
 .home .iframe h2 {
   text-align: center;
 }
-.home .iframe * {
-  text-align: center;
-  color: #e1e1e1;
-}
+
 .home .iframe p {
   justify-content: center;
   align-items: center;
@@ -747,23 +773,56 @@ font-weight: 100;
 .home .iframe p span {
   width: fit-content;
 }
-
-.locaux img {
-  height: 5rem;
-  width: auto;
-  min-width: auto;
-  margin-right: 2rem;
+.home img.open {
+  height: 15rem;
   background-color: var(--main-bg-color);
-  border-radius: 50%;
-  padding: 0.2rem;
+}
+.home .locaux  img {
+  height: 2.5rem;
+  margin-right: 2rem;
 }
 
+.home section.retrouve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.home section.retrouve .locaux {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 5rem;
+}
+
+.home section.retrouve .locaux > * {
+  min-height: 35vh;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.25rem;
+}
+
+.home section.retrouve .locaux > * {
+  background-color: var(--main-bg-color);
+  color : black;
+}
 /********************************************************************* PIZZAS *********************************************************************/ 
 
 .menu h1 {
   width: 100%;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+.menu {
+  background-image: url("./assets//back.png");
+  background-size:20%;
 }
 
 .menu .button_container {
@@ -781,6 +840,7 @@ font-weight: 100;
   padding: 0.25rem;
   width: 9rem;
   height: 9rem;
+  background-color: var(--main-bg-color);
 }
 .menu .button_Choice img{
   margin: 1rem;
@@ -947,9 +1007,14 @@ font-weight: 100;
   align-items: flex-start;
   margin: 0;
 }
+
+.footer .barket > * {
+  width: fit-content;
+  margin-right: 1rem;
+}
 .footer .barket img {
-  width: 6rem;
-  height: 5rem;
+  width: auto;
+  height: 3rem;
   overflow: hidden;
   object-fit: contain;
   border-radius: 0;
