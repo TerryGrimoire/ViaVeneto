@@ -130,10 +130,19 @@ function Services({ helmet }) {
         <div>
           <p className="dispo">
             {pizzas !== null &&
-              pizzas.filter(
-                (el) => el.Nom !== "Nom" && el.Type.includes(choice)
-              ).length}{" "}
-            résultats disponibles
+            pizzas.filter((el) => el.Nom !== "Nom" && el.Type.includes(choice))
+              .length > 0 ? (
+              <>
+                {
+                  pizzas.filter(
+                    (el) => el.Nom !== "Nom" && el.Type.includes(choice)
+                  ).length
+                }{" "}
+                résultats disponibles
+              </>
+            ) : (
+              <p>chargement de la carte</p>
+            )}
           </p>
           <div className="dispo">
             {choice === "pizza" && (
