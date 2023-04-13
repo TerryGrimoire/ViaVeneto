@@ -115,6 +115,62 @@ li {
 .margin0r1r {
   margin: 0 1rem;
 }
+
+/*****************************TEST ************************/ 
+.messagedefilant {
+  display: block;
+  margin: 0 auto;
+  padding: 1rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
+
+.messagedefilant, .messagedefilant * {
+  background-color: var(--third-color);
+  color: var(--main-bg-color);
+  font-family: var(--font-hind);
+  font-size: 1rem; 
+  font-weight: bold;
+}
+ 
+.messagedefilant div {
+  position: absolute;
+  top:0.25rem;
+  min-width: 100%; /* au minimum la largeur du conteneur */
+}
+ 
+.messagedefilant div span, 
+.messagedefilant div:after {
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+  top:0;
+  margin: 0 5rem;
+}
+ 
+.messagedefilant div span {
+  animation: defilement 15s infinite linear;
+  background:var(--bleu-color);
+}
+ 
+.messagedefilant div:after {
+  position: absolute;
+  top:0; left:0;
+  content:attr(data-text);
+  animation: defilement2 15s infinite linear;
+}
+ 
+@keyframes defilement {
+  0% { margin-left: 0; }
+  100% { margin-left: -100%; }
+}
+ 
+@keyframes defilement2 {
+  0% { margin-left: 100%; }
+  100% { margin-left: 0%; }
+}
 /********************************************************************* NAV *********************************************************************/ 
 
 .openBurger {
@@ -190,7 +246,12 @@ transform: rotate(180deg);
   font-size: 1.2rem;
   color: var(--fourth-color);
 }
-
+.CTA_home:hover {
+  cursor: pointer;
+}
+button:hover {
+  cursor: pointer;
+}
 header a {
   height: 100%;
   display: flex;
@@ -493,7 +554,7 @@ ul {
 
 .menu .dispo {
   width: 100%;
-  margin: 2rem 0;
+  margin: 2rem 0 4rem;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -501,9 +562,6 @@ ul {
   align-items: center;
 }
 
-.menu .dispo > * {
-  margin: 0.5rem 0;
-}
 .plats {
   display: flex;
   flex-direction: column;
@@ -561,29 +619,57 @@ ul {
   font-weight: bold;
 }
 
-.nouveau {
+.neww {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   flex-wrap: wrap;
-  padding: 2rem 0 0;
+  padding: 0rem 0 2rem;
+  color: var(--third-color);
+  text-align: center;
 }
-
-.nouveau img {
+.small {
+  font-size: 1rem;
+  margin-top: -2rem;
+  text-align: center;
+  width: 100%;
+}
+.neww img {
   width: 3rem;
-  margin: 0 1rem;
+  margin: 1rem;
 }
 
-.nouveau div {
+.jour {
+  text-align: left;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+
+}
+.jour div{
+  padding: 4rem 0rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  color: var(--third-color);
   width: 100%;
 }
 
-.nouveau div small {
-  margin: 0.25rem 0;
+
+.jour div h3 {
+  font-family: var(--font-title);
+  font-size: 1.8rem;
+  width: 70%;
+  text-align: left;
 }
+
+.jour div h4 {
+  font-size: 1.25rem;
+}
+
 /******************************************************************************************************************************************/ 
 /********************************************************************* DESKTIOP *********************************************************************/ 
 /******************************************************************************************************************************************/ 
@@ -603,7 +689,32 @@ ul {
     flex-direction: row;
     align-items: center;
   }
+/************************** TEST ******************/
+.messagedefilant div span {
+  animation: defilement 30s infinite linear;
+}
+ 
+.messagedefilant div:after {
+  position: absolute;
+  top:0; left:0;
+  content:attr(data-text);
+  animation: defilement2 30s infinite linear;
+}
+.messagedefilant {
+  display: block;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: fit-content;
+}
 
+.messagedefilant div {
+  position: absolute;
+  top:0.75rem;
+  min-width: 100%; /* au minimum la largeur du conteneur */
+}
 /********************************************************************* NAVBAR *********************************************************************/ 
 .navbar {
   padding: 2rem 0;
@@ -861,9 +972,12 @@ width: 50vw;
   flex-direction: row;
 }
 
-.menu .dispo > * {
-  margin: 1rem ;
+.menu .dispo div {
+  flex-direction: row ;
+  flex-wrap: wrap;
 }
+
+
 .plats {
   display: flex;
   flex-wrap: nowrap;
@@ -910,29 +1024,40 @@ width: 50vw;
   width: 100%;
   padding: 0rem 0 2rem;
 }
-.nouveau {
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-.nouveau * {
-  margin-right: 0.5rem;
+.neww {
+  flex-direction: row;
 }
 
-.nouveau h3 {
-  font-size: 1.2rem;
+.jour div {
+  justify-content: center;
+  padding: 1rem 0;
+  width: 60%;
+  background-color: var(--main-bg-color);
+  color: var(--third-color);
+  border-radius: 0.5rem 0.5rem 0rem  0rem;
+  border-top: var(--third-color) 1px solid;
+  border-left: var(--third-color) 1px solid;
+  border-right: var(--third-color) 1px solid;
 }
 
-.nouveau img {
-  width: 2rem;
-  height: auto;
-}
+.jour  p:last-of-type {
+  width: 60%;
+  text-align: center;
+  background-color: var(--main-bg-color);
+  color: var(--third-color);
+  border-radius: 0 0 0.5rem  0.5rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--third-color) 1px solid;
+  border-left: var(--third-color) 1px solid;
+  border-right: var(--third-color) 1px solid;
 
-.nouveau div {
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 30%;
-  padding: 0.25rem 0 0;
+}
+.small {
+  margin-top: -5rem;
+}
+.jour {
+  margin-bottom: 3rem;
+  
 }
 /********************************************************************* FOOTER *********************************************************************/ 
 

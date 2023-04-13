@@ -5,6 +5,7 @@ import mc from "../../assets/mc.png";
 import tk from "../../assets/tickets.png";
 import cheque from "../../assets/logo-cheque.gif";
 import ticket from "../../assets/chequedej.png";
+import vac from "../../assets/vacances.jpg";
 import facebook from "../../assets/facebook.svg";
 import barket from "../../assets/barket.png";
 
@@ -19,6 +20,7 @@ function Footer() {
           <img src={ticket} alt="tickets restaurants logo" />
           <img src={tk} alt="tickets restaurants logo" />
           <img src={cheque} alt="cheque accepté logo" />
+          <img src={vac} alt="cheques vacances accepté logo" />
         </div>
       </div>
       <div>

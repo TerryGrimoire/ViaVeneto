@@ -8,6 +8,7 @@ import Mentions from "./pages/Mentions";
 import Error from "./pages/Error";
 
 import "./App.css";
+import Defilant from "./components/Defilant";
 
 function App() {
   const helmet = {
@@ -19,6 +20,7 @@ function App() {
     <BrowserRouter>
       <HelmetProvider>
         <Header helmet={helmet} />
+        <Defilant />
         <Routes>
           <Route path="/" element={<Home helmet={helmet} />} />
           <Route path="/Menu" element={<Services helmet={helmet} />} />

@@ -8,6 +8,7 @@ import pizzaImg from "../assets/pizza.png";
 import salade from "../assets/salade.png";
 import boisson from "../assets/boisson.png";
 import pate from "../assets/pate.png";
+import neww from "../assets/new.png";
 
 function Services({ helmet }) {
   const [pizzas, setPizzas] = useState([]);
@@ -55,6 +56,7 @@ function Services({ helmet }) {
       .then((text) => papa.parse(text))
       .then((data) => prepareData(data.data));
   }, []);
+
   return (
     <div className="menu">
       <Helmet>
@@ -145,19 +147,79 @@ function Services({ helmet }) {
             )}
           </p>
           <div className="dispo">
-            {choice === "pizza" && (
-              <div>
-                <h4>Suppléments</h4>
-                <ul className="supp">
-                  <li>1 € pour tout supplément</li>
-                  <li>
-                    2 € pour les suppléments viande, poisson, chèvre ou
-                    roquefort
-                  </li>
-                  <li>3€ pour le supplément crevette</li>
-                </ul>
-              </div>
-            )}
+            {/* POUR LES PIZZAS */}
+            {pizzas !== null &&
+              choice === "pizza" &&
+              pizzas.filter(
+                (el) => el.Nom !== "Nom" && el.Type.includes("presto")
+              ).length >= 0 && (
+                <div>
+                  {pizzas !== null &&
+                    pizzas
+                      .filter(
+                        (el) => el.Nom !== "Nom" && el.Type.includes("presto")
+                      )
+                      .map((pizza) => (
+                        <div className="jour" key={pizza.Nom}>
+                          <p className="neww">
+                            <img
+                              src={neww}
+                              alt="etoile avec ecrit new dedans"
+                            />{" "}
+                            Nouveau - Menu presto
+                          </p>
+                          <p className="small">(Uniquement le midi)</p>
+                          <div>
+                            <h3>{pizza.Nom}</h3>
+                            <h4>{pizza.prix}</h4>
+                          </div>
+                          <p>{pizza.Description}</p>
+                        </div>
+                      ))}
+                </div>
+              )}
+            {/* POUR LE REPAS DU JOUR */}
+            <div>
+              {pizzas !== null &&
+                choice === "plat" &&
+                pizzas
+                  .filter((el) => el.Nom !== "Nom" && el.Type.includes("repas"))
+                  .map((pizza) => (
+                    <div className="jour" key={pizza.Nom}>
+                      <p className="neww">
+                        <img src={neww} alt="etoile avec ecrit new dedans" />{" "}
+                        Nouveau - Plat du jour
+                      </p>
+                      <p className="small">(Uniquement le midi)</p>
+                      <div>
+                        <h3>{pizza.Nom}</h3>
+                        <h4>{pizza.prix}</h4>
+                      </div>
+                      <p>{pizza.Description}</p>
+                    </div>
+                  ))}
+            </div>
+            {/* POUR LE PASTA DU JOUR */}
+            <div>
+              {pizzas !== null &&
+                choice === "pate" &&
+                pizzas
+                  .filter((el) => el.Nom !== "Nom" && el.Type.includes("pasta"))
+                  .map((pizza) => (
+                    <div className="jour" key={pizza.Nom}>
+                      <p className="neww">
+                        <img src={neww} alt="etoile avec ecrit new dedans" />{" "}
+                        Nouveau - Pasta du jour
+                      </p>
+                      <p className="small">(Uniquement le midi)</p>
+                      <div>
+                        <h3>{pizza.Nom}</h3>
+                        <h4>{pizza.prix}</h4>
+                      </div>
+                      <p>{pizza.Description}</p>
+                    </div>
+                  ))}
+            </div>
           </div>
           <div>
             {pizzas !== null &&
@@ -172,6 +234,22 @@ function Services({ helmet }) {
                     <p>{pizza.Description}</p>
                   </div>
                 ))}
+          </div>
+          <div className="dispo">
+            {/* POUR LES PIZZAS */}
+            {choice === "pizza" && (
+              <div>
+                <h4>Suppléments</h4>
+                <ul className="supp">
+                  <li>1 € pour tout supplément</li>
+                  <li>
+                    2 € pour les suppléments viande, poisson, chèvre ou
+                    roquefort
+                  </li>
+                  <li>3€ pour le supplément crevette</li>
+                </ul>
+              </div>
+            )}
           </div>
         </div>
       </section>

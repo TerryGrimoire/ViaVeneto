@@ -39,9 +39,9 @@ export default function Home({ helmet }) {
             Nous proposons une variétés de plats faits maisons qui émerveillent
             les papilles de nos clients depuis de nombreuses années. Nos
             produits sont séléctionnés avec minutie, nos pizzas sont faites avec
-            la vraie pâte à l'italienne et nos recettes nous viennent tout droit
-            de notre héritage familiale. C'est en celà que notre cuisine a un
-            caractère si particulier.
+            la vraie pâte à l'italienne et nos recettes sont à déguster sur
+            place ou à emporter. Nous proposons également un service de
+            livraison sur Saint-Denis et ses proches écarts.
           </p>
         </article>
       </section>
