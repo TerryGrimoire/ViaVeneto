@@ -9,11 +9,15 @@ import vac from "../../assets/vacances.jpg";
 import facebook from "../../assets/facebook.svg";
 import barket from "../../assets/barket.png";
 
-function Footer() {
+function Footer({ langue }) {
   return (
     <footer className="flex-col center padding1 footer ">
       <div>
-        <h2>Moyens de paiement acceptés</h2>
+        <h2>
+          {langue === "fr"
+            ? "Moyens de paiement acceptés"
+            : "Mwayin péman aksèpté"}
+        </h2>
         <div className="flex">
           <img src={cb} alt="mastercard logo" />
           <img src={mc} alt="tickets restaurants logo" />
@@ -24,7 +28,11 @@ function Footer() {
         </div>
       </div>
       <div>
-        <h2>Retrouver nous sur les réseaux</h2>
+        <h2>
+          {langue === "fr"
+            ? "Retrouver nous sur les réseaux"
+            : "Artrouv anou su bann rézo"}
+        </h2>
         <ul className="barket">
           <a href="https://www.facebook.com/pages/Via-Veneto-Pizza/118507218238458">
             <li>
@@ -40,7 +48,10 @@ function Footer() {
       </div>
 
       <small>
-        Designé et développé par le{"  "}
+        {langue === "fr"
+          ? "Designé et développé par le"
+          : "Disayné é dévlopé par lo"}
+        {"  "}
         <a
           href="https://grimoire-numerique.re/"
           target="_blank"
@@ -51,7 +62,9 @@ function Footer() {
         </a>
       </small>
       <Link to="/Mentions">
-        <small className="small">Mentions Légales</small>
+        <small className="small">
+          {langue === "fr" ? "Mentions Légales" : "Mansyion Légal"}
+        </small>
       </Link>
     </footer>
   );

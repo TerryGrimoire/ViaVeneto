@@ -7,7 +7,7 @@ import tel from "../assets/tel.png";
 import cal from "../assets/cal.png";
 import op from "../assets/op.png";
 
-export default function Home({ helmet }) {
+export default function Home({ helmet, langue }) {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -20,52 +20,59 @@ export default function Home({ helmet }) {
         <meta name="description" content={helmet.description} />
       </Helmet>
 
-      <Image title={helmet.title} />
+      <Image title={helmet.title} langue={langue} />
       <section className="articles_container">
         <article>
-          <h2>Ouvert depuis plus de 35 ans</h2>
+          <h2>
+            {langue === "fr"
+              ? "Ouvert depuis plus de 35 ans"
+              : "Rouvèr depwi omwin 35 an"}
+          </h2>
           <p>
-            C'est en 1988 que Fabienne et Serge ont ouvert le Via Veneto à Saint
-            Denis. Au fil des années, ils ont su faire de leur restaurant un
-            lieu convivial, authentique et familial. Ici, les plats
-            méditerranéens sont à l'honneur. On les cuisine avec rigueur et
-            générosité pour assurer à chaque client une expérience gustative
-            satisfaisante mêlant tradition et passion.
+            {langue === "fr"
+              ? " C'est en 1988 que Fabienne et Serge ont ouvert le Via Veneto à Saint Denis. Au fil des années, ils ont su faire de leur restaurant un lieu convivial, authentique et familial. Ici, les plats méditerranéens sont à l'honneur. On les cuisine avec rigueur et générosité pour assurer à chaque client une expérience gustative satisfaisante mêlant tradition et passion."
+              : "Sé an 1988 ke Fabienne ek Serge la rouv le Via Veneto a Sin-Dni. Ek lo tan, bana la fé giny fé de zot restoran in landrwa konvivyal, otantik é familyal. Isi, bann pla méditéranéin lé a lonèr. I kwisin bana ek rigueur é jénérosité pou asure a shak klian in gayar lekspérians da boush melan tradisyon é pasyon."}
           </p>
         </article>
         <article>
-          <h2>Des plats de qualité</h2>
+          <h2>
+            {" "}
+            {langue === "fr" ? "Des plats de qualité" : "Bann pla de kalité"}
+          </h2>
           <p>
-            Nous proposons une variétés de plats faits maisons qui émerveillent
-            les papilles de nos clients depuis de nombreuses années. Nos
-            produits sont séléctionnés avec minutie, nos pizzas sont faites avec
-            la vraie pâte à l'italienne et nos recettes sont à déguster sur
-            place ou à emporter. Nous proposons également un service de
-            livraison sur Saint-Denis et ses proches écarts.
+            {langue === "fr"
+              ? "Nous proposons une variétés de plats faits maisons qui émerveillent les papilles de nos clients depuis de nombreuses années. Nos produits sont séléctionnés avec minutie, nos pizzas sont faites avec la vraie pâte à l'italienne et nos recettes sont à déguster sur place ou à emporter. Nous proposons également un service de livraison sur Saint-Denis et ses proches écarts."
+              : "Nou propoz in varyété d'plat fé mézon ki émèrvey le papy de nout klian depwi lontan. Nout prodwi lé séléksyoné ek minusi, nout pizza lé fé ek la vré pat a litalièn é zot i peu manj nout reset sur plas ou a anporté. Nou propoz osi in servis de livrézon su Sin-Dni é son bann komun a proksimité."}
           </p>
         </article>
       </section>
       <section className="retrouve">
         <div className="iframe">
-          <h2>Nous retrouver</h2>
+          <h2>{langue === "fr" ? "Nous retrouver" : "Artrouv anou"}</h2>
           <div className="locaux">
             <p>
               <img src={loc} alt="icone pour localisation" />
               <span className="gras">
-                151 Rue Jules Auber, Saint-Denis, 97400, La Réunion
+                {langue === "fr"
+                  ? "151 Rue Jules Auber, Saint-Denis, 97400, La Réunion"
+                  : "151 Rue Jules Auber, Sin-Dni"}
               </span>
             </p>
             <p>
               <img src={tel} alt="icone pour téléphone" />
               <span className="gras">
-                Réservez une table directement au{" "}
+                {langue === "fr"
+                  ? "Réservez une table directement au"
+                  : "Résèrv in tab direkteman o"}{" "}
                 <a href="tel:+262262219271">0262219271</a>
               </span>
             </p>
             <p>
               <img src={cal} alt="icone représantant un calendrier" />
               <span className="gras">
-                Ouvert du mardi au dimanche. Fermé le lundi.
+                {langue === "fr"
+                  ? "Ouvert du mardi au dimanche. Fermé le lundi."
+                  : "Rouvèr du mardi o dimansh. Fermé le lindi."}
               </span>
             </p>
           </div>
@@ -76,7 +83,11 @@ export default function Home({ helmet }) {
         </div>
         <div className="hor">
           <div>
-            <h2>Nos horaires d'ouverture</h2>
+            <h2>
+              {langue === "fr"
+                ? "Nos horaires d'ouverture"
+                : "Nout zorèr douvertur"}
+            </h2>
             <img src={op} alt="open store" className="desktop open" />
           </div>
           <ul className="horaires">

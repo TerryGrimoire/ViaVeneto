@@ -10,7 +10,7 @@ import boisson from "../assets/boisson.png";
 import pate from "../assets/pate.png";
 import neww from "../assets/new.png";
 
-function Services({ helmet }) {
+function Services({ helmet, langue }) {
   const [pizzas, setPizzas] = useState([]);
   const prepareData = (data) => {
     // j correspond aux lignes de A à ZZZ sur fichier Excel
@@ -58,14 +58,17 @@ function Services({ helmet }) {
   }, []);
 
   return (
-    <div className="menu">
+    <main className="menu">
       <Helmet>
         <title> {helmet.title} | Services </title>
         <link rel="canonical" href={`${helmet.href}/Services`} />
         <meta name="description" content={helmet.description} />
       </Helmet>
       <section>
-        <h1>Notre carte</h1>
+        <h1>{langue === "fr" ? "Notre carte" : "Nout kart"}</h1>
+        <p className="frenchOnly">
+          {langue === "fr" ? "" : "(Nout kart lé unikman disponib en fransé)"}
+        </p>
         <div className="button_container">
           <button
             type="button"
@@ -253,7 +256,7 @@ function Services({ helmet }) {
           </div>
         </div>
       </section>
-    </div>
+    </main>
   );
 }
 

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 
-function Burger() {
+function Burger({ langue }) {
   return (
     <header className="flex padding-header justify-between">
       <Link to="/">
@@ -10,7 +10,7 @@ function Burger() {
       </Link>
       <Link to="/Menu">
         <button className="CTA_home" type="button">
-          Notre menu
+          {langue === "fr" ? "Notre menu" : "Nout menu"}
         </button>
       </Link>
     </header>

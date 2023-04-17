@@ -1,8 +1,7 @@
 import React from "react";
 import background from "../../../assets/background.jpg";
 
-
-function Image({ title }) {
+function Image({ title, langue }) {
   /* Pour utiliser ce composant, suivre les étapes suivantes :
 
     1/ Remplacer background.png par l'image souhaitée dans Assets
@@ -16,15 +15,15 @@ function Image({ title }) {
 
   */
 
-  const landingData = {
-    h2: "Une cuisine traditionelle qui a fait ses preuves.",
-    alt: "pizzas",
-  };
   return (
     <div className="landing_page container">
       <h1>{title}</h1>
-      <h2>{landingData.h2}</h2>
-     <img src={background} alt="" className="background_img" />
+      <h2>
+        {langue === "fr"
+          ? "Une cuisine traditionnelle qui a fait ses preuves."
+          : "In kwisin tradisyonel la fini fé son prèv."}
+      </h2>
+      <img src={background} alt="" className="background_img" />
       <div className="veil" />
     </div>
   );
