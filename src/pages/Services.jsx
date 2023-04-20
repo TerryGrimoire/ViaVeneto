@@ -60,7 +60,7 @@ function Services({ helmet, langue }) {
   return (
     <main className="menu">
       <Helmet>
-        <title> {helmet.title} | Services </title>
+        <title> {helmet.title} | Menu </title>
         <link rel="canonical" href={`${helmet.href}/Services`} />
         <meta name="description" content={helmet.description} />
       </Helmet>
@@ -169,7 +169,7 @@ function Services({ helmet, langue }) {
                               src={neww}
                               alt="etoile avec ecrit new dedans"
                             />{" "}
-                            Nouveau - Menu presto
+                            Nouveau - Plat du jour
                           </p>
                           <p className="small">(Uniquement le midi)</p>
                           <div>
@@ -201,6 +201,14 @@ function Services({ helmet, langue }) {
                       <p>{pizza.Description}</p>
                     </div>
                   ))}
+            </div>
+            {/* POUR LES BOISSON */}
+            <div>
+              {pizzas !== null && choice === "boisson" && (
+                <p className="vin">
+                  N'hésitez pas à nous solliciter pour la carte des vins.
+                </p>
+              )}
             </div>
             {/* POUR LE PASTA DU JOUR */}
             <div>

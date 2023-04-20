@@ -30,7 +30,7 @@ h1 {
   font-family: var(--font-title);
 }
 
-
+ 
 h2 {
   text-align: left;
   font-family: var(--font-title);
@@ -639,6 +639,9 @@ ul {
   font-size: 1.1rem;
 }
 
+.vin {
+  padding: 0 2rem;
+}
 .error {
   width: 100%;
   height: 100vh;
@@ -691,6 +694,7 @@ ul {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 
 }
 .jour div{
@@ -702,7 +706,6 @@ ul {
   color: var(--third-color);
   width: 100%;
 }
-
 
 .jour div h3 {
   font-family: var(--font-title);

@@ -54,8 +54,8 @@ export default function Home({ helmet, langue }) {
               <img src={loc} alt="icone pour localisation" />
               <span className="gras">
                 {langue === "fr"
-                  ? "151 Rue Jules Auber, Saint-Denis, 97400, La Réunion"
-                  : "151 Rue Jules Auber, Sin-Dni"}
+                  ? "151, rue Jules Auber, Saint-Denis, 97400, La Réunion"
+                  : "151, rue Jules Auber, Sin-Dni"}
               </span>
             </p>
             <p>

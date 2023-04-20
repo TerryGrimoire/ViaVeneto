@@ -47,7 +47,7 @@ function App() {
             type="button"
             className={langue === "fr" ? "iconeLangue kr" : " iconeLangue fr"}
             onClick={handleClick}
-          >
+          > 
             {langue === "fr" ? "KREOL" : "FR"}
           </button>
         </HelmetProvider>

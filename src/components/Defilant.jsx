@@ -35,8 +35,8 @@ function Defilant() {
     json.shift();
     if (
       json[0].Message &&
-      parseInt(json[0].Debut, 10) < parseInt(today, 10) &&
-      parseInt(json[0].Fin, 10) > parseInt(today, 10)
+      parseInt(json[0].Debut, 10) <= parseInt(today, 10) &&
+      parseInt(json[0].Fin, 10) >= parseInt(today, 10)
     ) {
       setMessage(json[0].Message);
     }
