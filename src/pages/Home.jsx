@@ -41,7 +41,7 @@ export default function Home({ helmet, langue }) {
           </h2>
           <p>
             {langue === "fr"
-              ? "Nous proposons une variétés de plats faits maisons qui émerveillent les papilles de nos clients depuis de nombreuses années. Nos produits sont séléctionnés avec minutie, nos pizzas sont faites avec la vraie pâte à l'italienne et nos recettes sont à déguster sur place ou à emporter. Nous proposons également un service de livraison sur Saint-Denis et ses proches écarts."
+              ? "Nous proposons une variétés de plats faits maison qui émerveillent les papilles de nos clients depuis de nombreuses années. Nos produits sont séléctionnés avec minutie, nos pizzas sont faites avec la vraie pâte à l'italienne et nos recettes sont à déguster sur place ou à emporter. Nous proposons également un service de livraison sur Saint-Denis et ses proches écarts."
               : "Nou propoz in varyété d'plat fé mézon ki émèrvey le papy de nout klian depwi lontan. Nout prodwi lé séléksyoné ek minusi, nout pizza lé fé ek la vré pat a litalièn é zot i peu manj nout reset sur plas ou a anporté. Nou propoz osi in servis de livrézon su Sin-Dni é son bann komun a proksimité."}
           </p>
         </article>

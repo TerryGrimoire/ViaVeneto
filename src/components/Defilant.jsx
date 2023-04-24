@@ -3,7 +3,7 @@ import papa from "papaparse";
 
 function Defilant() {
   const [message, setMessage] = useState(
-    "Sur place ou à emporter ! Livraison gratuite sur tout St Denis ! "
+    "Sur place ou à emporter ! Livraison possible sur tout St Denis ! "
   );
 
   let today = new Date();
